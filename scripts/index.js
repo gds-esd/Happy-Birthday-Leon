@@ -190,8 +190,8 @@ function showAnswer() {
 
 function changeAnswer() {
   currentans = Math.floor(Math.random() * answerList.length)
-  document.getElementById('answertext').style.paddingTop = answerList[currentans][1] + 'px'
-  document.getElementById('answertext').innerText = answerList[currentans][0];
+  document.getElementById('answer-text').style.paddingTop = answerList[currentans][1] + 'px'
+  document.getElementById('answer-text').innerText = answerList[currentans][0];
 }
 
 function showList() {
