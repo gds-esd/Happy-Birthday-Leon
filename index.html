@@ -1,0 +1,65 @@
+<html>
+ <head>
+  <title>Magic 8 Ball</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <script type="text/javascript" src="scripts/index.js"></script>
+ </head>
+ <body ontouchstart="">
+  <div id="content">
+    <h1>Leon's Magic 8 Ball</h1>
+    <input type="text" id="question" />
+    <!-- <button id="show">show answer</button> -->
+    <!-- <button id="changeans">change ans</button> -->
+    <div id="instructions">[FILLER TEXT] Ask Leon for advice & you shall receive. <br/> Shake the 8 ball when you are ready for your answer</div>
+    <div id="eight-ball" class="eight-ball">
+      <div class="reflection" id="top"></div>
+      <div class="reflection" id="bottom"></div>
+      <div id="eight-circle">
+        <p id="eight">8</p>
+      </div>
+      <div id="answer-circle">
+        <div id="inner-circle"></div>
+        <div id="outer-circle"></div>
+        <div id="answer-container">
+          <img id="triangle" src="img/triangle.png" />
+          <div class="answer-text-container">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="answer-text">
+              <p id="answer-text"> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="start-button">START</button>
+    <button id="reset-button" style="display:none">Ask another question</button>
+    <button id="view-list-button">View list of &#127921 responses <span id="arrow">&#9650</span></button>
+    <div>
+      
+      <ul id='response-list' style="display: none">
+      </ul>
+    </div>
+    
+    <!-- <div id="values">
+      <div>
+        <div>orientation values</div>
+        init x: <span id="initX">-</span>
+        init y: <span id="initY">-</span>
+        x: <span id="orX">-</span>
+        y: <span id="orY">-</span>
+      </div>
+      <div>
+        <div>acceleration values</div>
+        x: <span id="accX">0</span>,
+        y: <span id="accY">0</span>,
+        z: <span id="accZ">0</span>
+      </div>
+    </div>  -->
+  </div>
+ </body>
+</html>

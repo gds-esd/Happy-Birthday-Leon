@@ -1,0 +1,253 @@
+h1 { font-weight: 100; font-size: 2em;}
+    
+#content { 
+  width: 100%;
+  height: 100%; 
+  margin: 0 auto; 
+  border: 1px dotted black;       
+  text-align: center; 
+  font-family: 'Helvetica Neue', arial; 
+  font-weight: 100;
+  overflow: auto;
+}
+
+#instructions {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/***** 8 ball *****/
+
+div.eight-ball {
+  background-color: #343434;
+  border: 1px solid #343434;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  margin: 30px auto;
+  overflow: hidden;
+  filter: blur(7px)
+}
+
+/* White eight circle */
+
+#eight-circle {
+  background: radial-gradient(white 50%, #ffffffd6 80%);
+  border: 1px solid #FFF;
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
+  margin: 25% auto;
+}
+
+p#eight {
+  font-size: 5em;
+  margin: 20% auto;
+  color: black;
+}
+
+/* 8 ball reflection */
+
+.reflection {
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 0px;
+  height: 0px;
+  background-color: white;
+  position: relative;
+  box-shadow: 0 0 38px 21px #fff;
+}
+
+#top {
+  left: 50px;
+  top: 90px;
+}
+
+#bottom {
+  left: -35px;
+  top: 192px;
+  box-shadow: 0 0 65px 41px #fff;
+}
+
+
+/**** answer circle ****/
+
+#answer-container {
+  height: 160px
+}
+
+#answer-circle {
+  margin: 25% auto;
+  height: 182px;
+  width: 182px;
+}
+
+#inner-circle {    
+  box-shadow: 0px 0px 3px 3px black;
+  background-color: black;
+  border-radius: 50%;
+  margin: 0 auto;
+  height: 165px;
+  width: 165px;
+}
+
+#outer-circle {
+  box-shadow: 0px 0px 6px 1px #000000, inset 0px 0px 2px 1px #000000;
+  border: 2px solid black;
+  height: 175px;
+  width: 175px;
+  border-radius: 50%;
+  margin: -172px auto;
+}
+
+/** Answer circle contents **/
+/* Triangle and constraints */
+#triangle {
+  height: 90%;
+  margin: 10% auto;
+}
+
+.left,
+.right {
+  width: 50%;
+  height: 12ex;
+}
+
+.left {
+  -webkit-shape-outside: polygon(10px 0, 100% 100%, 0 100%);
+  shape-outside: polygon(10px 0, 100% 100%, 0 100%);
+  float: left;
+  -webkit-clip-path: polygon(10px 0, 100% 100%, 0 100%);
+  clip-path: polygon(10px 0, 100% 100%, 0 100%);
+}
+
+.right {
+  -webkit-shape-outside: polygon(calc(100% - 10px) 0, 100% 100%, 0 100%);
+  shape-outside: polygon(calc(100% - 10px) 0, 100% 100%, 0 100%);
+  float: right;
+  -webkit-clip-path: polygon(calc(100% - 10px) 0, 100% 100%, 0 100%);
+  clip-path: polygon(calc(100% - 10px) 0, 100% 100%, 0 100%);
+}
+
+/* Answer text */
+
+.answer-text-container {
+  width: 130px;
+  position: relative;
+  margin: auto;
+  top: -135px;
+}
+
+#answer-text {
+  margin: 0;
+  text-align: center;
+  font-size: 11px;
+  line-height:14px;
+  color: #a8d7f2;
+  font-weight: 400;
+  text-shadow: 1px 1px 5px #010a2f;
+}
+
+
+/* Answer animation */
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 100%}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 100%}
+}
+
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+}
+
+
+
+
+/**** Question box ****/
+
+#question {
+  margin: 20px;
+  padding: 10px;
+  width: 80%;
+  font-size:22px;
+  display: none;
+}
+
+
+
+
+/**** Buttons ****/
+
+button {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Gemunu Libre', sans-serif;
+  background-color: transparent;
+  border: 1px solid rgb(23, 61, 216);
+  border-radius: 4px;
+  padding: 10px;
+  color: rgb(23, 61, 216);
+  text-shadow: rgb(86 110 207) 0px 0px 9px;
+  box-shadow: rgb(86 110 207) 0px 0px 20px inset, rgb(86 110 207) 0px 0px 8px;
+}
+
+
+button:focus {
+  text-shadow: rgb(62 75 128 / 71%) 0px 0px 6px;
+  box-shadow: rgb(108 108 109) 0px 0px 20px inset, rgb(86 110 207) 0px 0px 8px;
+}
+
+#reset-button {
+  display: none;
+  margin: 0px auto 20px;
+}
+
+#view-list-button {
+  display: none;
+  margin: 0 auto;
+}
+
+#start-button {
+  font-weight: 200;
+  margin: 0px auto;
+  padding: 20px 40px;
+  font-size: 46px;
+  top: -230px;
+  position: relative;
+}
+
+
+
+/*** Reponse button and list ***/
+
+@counter-style single-emoji {
+  system: cyclic;
+  symbols: "\1F3B1";
+  suffix: " ";
+}
+
+#response-list {
+  width: 80%;
+  height: 80px;
+  padding: 20px;
+  margin: 20px auto;
+  outline: 1px solid grey;
+  border-radius: 16px;
+  text-align: left;
+  list-style-type: single-emoji;
+  list-style-position: inside;
+  overflow: scroll;
+  display: none;
+}
+
+span#arrow {
+  font-size: 12px;
+  padding: 4px;
+}
