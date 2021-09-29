@@ -98,9 +98,9 @@ function deviceOrientationListener(event) {
   document.getElementById('eight-circle').style.transform = 'translate(' + offsetX + 'px,' + offsetY +'px) scale(' + (1 - (offsetXabs/300)) + ',' + (1 - (offsetYabs/300)) + ') skewX(' + skewX + 'deg)'
   document.getElementById('answer-circle').style.transform = 'translate(' + offsetX/2 + 'px,' + offsetY/2 +'px) skewX(' + skewX/10 + 'deg)'
   // let string = 'translate(' + (-offsetX/1.9) + 'px,' + (-offsetY/1.9) +'px)'
-  let string = 'translate(' + (offsetX/10) + 'px,' + (offsetY/10) +'px)'
+  let string = 'translate(' + -(offsetX/8) + 'px,' + -(offsetY/8) +'px)'
 
-  document.getElementById('answer').style.transform = string
+  document.getElementById('answer-container').style.transform = string
   console.log('answercircle:' + offsetX/2 + 'px, ' + offsetY/2 + 'px');
   console.log('answer: ' + -(offsetX/2) + 'px, ' + -(offsetY/2) + 'px', string)
 }
@@ -141,7 +141,8 @@ window.addEventListener('load', (e) => {
 document.getElementById('reset-button').onclick = (e) => {
   e.preventDefault();
   document.getElementById('eight-circle').style.display = "block";
-  document.getElementById('reset-button').style.display = "none";  
+  document.getElementById('reset-button').style.display = "none"; 
+  document.getElementById('answer-circle').style.display = "none"
 }
 
   document.getElementById('view-list-button').onclick = (e) => {
@@ -186,6 +187,8 @@ function showAnswer() {
   document.getElementById('eight-circle').style.display = "none";
   document.getElementById('reset-button').style.display = "block";
   document.getElementById('view-list-button').style.display = "block";
+//test
+  document.getElementById('answer-circle').style.display = "block"
 }
 
 function changeAnswer() {

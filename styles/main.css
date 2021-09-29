@@ -80,6 +80,7 @@ p#eight {
   margin: 25% auto;
   height: 182px;
   width: 182px;
+  display: none;
 }
 
 #inner-circle {    
