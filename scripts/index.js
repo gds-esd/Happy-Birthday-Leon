@@ -144,7 +144,7 @@ document.getElementById('reset-button').onclick = (e) => {
   document.getElementById('reset-button').style.display = "none";  
 }
 
-  document.getElementById('view-list-button-button').onclick = (e) => {
+  document.getElementById('view-list-button').onclick = (e) => {
     e.preventDefault();
     showList();
   }
